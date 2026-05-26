@@ -6,7 +6,7 @@ const client = new MongoClient(dbConnectionUrl);
 
 let dbConnection=async()=>{
     await client.connect();
-    client.db("mongoDBProject_DataBase")
+    let db = client.db("mongoDBProject_DataBase");
     return db;
  }
  module.exports = {dbConnection};
